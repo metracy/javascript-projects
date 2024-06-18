@@ -1,5 +1,10 @@
 // Initialize Variables below
-
+engineIndicatorLight = "red blinking"
+spaceSuitsOn = true
+shuttleCabinReady = true
+crewStatus = spaceSuitsOn && shuttleCabinReady
+computerStatusCode = 200
+shuttleSpeed = 15000
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
 
 // add logic below to verify all astronauts are ready

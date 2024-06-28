@@ -37,18 +37,18 @@ function makeDownwardStairs(height, parameter = '#') {
     return stairs.slice(0, -1);
 }
 
-console.log(makeDownwardStairs(5,'~!'));
+console.log(makeDownwardStairs(5,'*'));
 
 
 console.log('------------ Separator block ------------');
 
 
-function makeSpaceLine(spaces, asterisks){
-    return " ".repeat(spaces) + "#".repeat(asterisks) + " ".repeat(spaces)
+function makeSpaceLine(spaces, length, parameter = '#'){
+    return " ".repeat(spaces) + parameter.repeat(length) + " ".repeat(spaces)
 }
 
 
-console.log(makeSpaceLine(3, 5));
+console.log(makeSpaceLine(3, 5,"*"));
 
 
 
@@ -56,30 +56,30 @@ console.log('------------ Separator block ------------');
 
 
 
-function makeIsoscelesTriangle(height) {
+function makeIsoscelesTriangle(height, parameter = '#') {
     let tri = '';
 
     // iterate over i from 0 to < height and call makeSpaceLine
     for (let i = 0; i < height; i++) {
-      tri += (makeSpaceLine(height - i - 1, 2*i + 1) + '\n');
+      tri += (makeSpaceLine(height - i - 1, 2*i + 1, parameter) + '\n');
     }
     // remove last row of '\n'
     return tri.slice(0, -1);
   }
 
-console.log(makeIsoscelesTriangle(5));
+console.log(makeIsoscelesTriangle(5,"*"));
 
 
 console.log('------------ Separator block ------------');
 
 
-function makeDiamond(height) {
-    let top = makeIsoscelesTriangle(height);
+function makeDiamond(height, parameter = '#') {
+    let top = makeIsoscelesTriangle(height, parameter);
     // slice off the bottom row of top after split reverse
     let bottom = top.split('\n').slice(0,-1).reverse().join('\n')
     // return the combined with newline added to make it show below it as if it were mirrored
     return top + "\n" + bottom;
 }
 
-console.log(makeDiamond(5));
+console.log(makeDiamond(5,"*"));
 

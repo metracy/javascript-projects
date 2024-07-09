@@ -1,10 +1,43 @@
 // Code your selectRandomEntry function here:
 
+  // non arrow version 
+function selectRandomEntry (ids) {
+  return ids[Math.floor(Math.random() * ids.length)];
+}
+
+// version using arrow implicit return
+// let selectRandomEntry = (ids) => ids[Math.floor(Math.random() * ids.length)];
+
+
+
 
 // Code your buildCrewArray function here:
-
+function buildCrewArray(crew_ids, animal_array) {
+  let selection = [];
+  while (selection.length < 3) {
+    let member = selectRandomEntry(crew_ids);
+    if (selection.includes(member)){
+      // jump  to next iteration
+    }
+    else {
+      selection.push(member);
+    }
+  };
+  for (let i = 0; i < selection.length; i++){
+    selection[i] = (animal_array.find(mem => mem.astronautID == selection[i]).name); // mem is element in function and we're replacing selection[i] with name from array
+  }
+  return selection;
+};
 
 let idNumbers = [291, 414, 503, 599, 796, 890];
+
+// test to build a crew
+
+//below
+
+
+
+  
 
 // Here are the candidates and the 'animals' array:
 let candidateA = {
@@ -50,6 +83,13 @@ let candidateF = {
   'astronautID':890
 };
 
+
 let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
 
+
+
+crew = buildCrewArray(idNumbers, animals);
+
+
 // Code your template literal and console.log statements:
+console.log(`${crew[0]}, ${crew[1]}, and ${crew[2]} are going to space!`)

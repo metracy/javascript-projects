@@ -1,9 +1,20 @@
+// annoyed with rounding function not in this like python
+
+let Matt = {
+  round: (num, decimals = 2) => {
+      let factor = 10 ** decimals;
+      return (Math.round(num * factor) / factor);
+  }
+};
+
+
 // Code your orbitCircumference function here:
 
-
+let orbitCircumference = radius => Matt.round(2 * Math.PI * radius, 0);
+  
 // Code your missionDuration function here:
 
-
+let missionDuration = (orbits_completed, orbital_radius = 2000, orbital_speed = 28000) => Matt.round((orbitCircumference(orbital_radius) * orbits_completed) / orbital_speed);
 // Copy/paste your selectRandomEntry function here:
 
 
@@ -56,3 +67,4 @@ let candidateA = {
  
  let crew = [candidateA,candidateC,candidateE];
  
+ console.log(`The mission will travel ${orbitCircumference(2000)*5} km around the planet, and it will take ${missionDuration(5)} hours to complete.`)

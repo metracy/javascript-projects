@@ -1,4 +1,5 @@
 //Import modules:
+// objects importing everything
 const input = require('readline-sync'); //Import readline-sync.
 const averages = require('./ScoreCalcs/averages'); //Import functions from averages.js.
 // Pull function with names

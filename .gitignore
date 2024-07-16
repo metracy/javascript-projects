@@ -1,3 +1,9 @@
 .DS_Storeunit-testing/exercises/node_modules/
-unit-testing/exercises/RPSLS.js
-unit-testing/exercises/package-lock.json
+**/unit-testing/exercises/RPSLS.js
+**/unit-testing/exercises/package-lock.json
+**.log
+**build/
+**/*.tmp
+**/node_modules/
+!.gitignore
+**/package-lock.jsonfile_list.txt

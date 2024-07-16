@@ -7,3 +7,25 @@
 **/node_modules/
 !.gitignore
 **/package-lock.jsonfile_list.txt
+# Node.js
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE related files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp

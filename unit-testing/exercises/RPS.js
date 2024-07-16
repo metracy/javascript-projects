@@ -1,6 +1,6 @@
 function whoWon(player1,player2){
 
-   if (player1 === player2){
+   if (player1 == player2){
      return 'TIE!';
    }
    

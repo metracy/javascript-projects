@@ -39,8 +39,7 @@ class Novel extends Book {
    }
 }
                                                                                             // author jerk
-let Novel2 = new Novel('Pride and Prejudice','Jane Austen',1813,'1111111111111',432,32,'No','Yes');
-console.log(`Author is a jerk?: ${Novel2.authorjerk}`);
+
 
 
 
